@@ -45,7 +45,7 @@ document.addEventListener('init', function(event) {
     $(page.data.corporations).each(function(index, train) {
       html.push(`<ons-list-item data-name="${train.Name}" modifier="chevron" tappable>${train.Name}</ons-list-item>`);
     });
-    $('#trains').html(html.join());
+    $('#trains').html(html.join(''));
     
     // 鉄道会社をタップしたら駅名一覧を取得します
     $(page).find('#trains ons-list-item').on('click', function(e) {
